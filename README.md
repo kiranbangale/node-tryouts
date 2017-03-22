@@ -1,12 +1,11 @@
-/*
-
 Ref links:
-    
+
     Node: https://nodejs.org/dist/latest-v7.x/docs/api/documentation.html
     REST: https://hackernoon.com/restful-api-design-with-node-js-26ccf66eab09#.z8tysoh96
     Babel: http://stackoverflow.com/questions/28782656/how-to-run-node-js-app-with-es6-features-enabled
     Debugging: https://www.youtube.com/watch?v=03qGA-GJXjI // keep node-inspector running in terminal(seperate) and do node --debug server.js
     NVM: https://github.com/creationix/nvm/blob/master/README.markdown // nvm use 7
+    Auth: https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens
 
 
 Handy commands:
@@ -61,13 +60,7 @@ MEAN Notes:
 
         Folder structure:
 
-            Module wise partition: 
+            Module wise partition:
                 index.js, separate-sub-module-file.js, partials-folder
 
         Configuration Settings:
-
-            
-        
-
- */
-
