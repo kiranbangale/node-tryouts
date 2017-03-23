@@ -1,7 +1,7 @@
 const app = require('./app');
 const config = require('./config/config');
 const mongoose = require('mongoose');
-const fs = require('fs');
+// const fs = require('fs');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
