@@ -1,4 +1,5 @@
 const app = require('../../app');
+const config = require('../../config/config');
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
@@ -8,7 +9,7 @@ router.use(bodyParser.urlencoded({ extended: true }));
 
 const User = require('../user/user');
 
-router.post('/login', (req, res) => {
+router.post('/', (req, res) => {
     User.findOne({
         name: req.body.name,
     }, (err, user) => {
@@ -23,8 +24,8 @@ router.post('/login', (req, res) => {
             } else {
 
                 // Create a token
-                var token = jwt.sign(user, app.get('superSecret'), {
-                  expiresInMinutes: 1440 // expires in 24 hours
+                var token = jwt.sign(user, config.secret, {
+                  expiresIn: 60*60*24 // expires in 24 hours
                 });
 
                 // return the information including token as JSON
@@ -39,5 +40,28 @@ router.post('/login', (req, res) => {
     });
 });
 
+router.use((req, res, nxt) => {
+  
+  const token = req.body.token || req.query.token || req.headers['x-access-token'];
+
+  if(token) {
+    jwt.verify(token, config.secret, (err, decoded) {
+      if(err) {
+        return res.json({ success: false, message: 'Failed to authenticate token.'});
+      } else {
+        req.decoded = decoded;
+        nxt();
+      }
+    })
+  } else {
+    return res.status(403).send({
+      success: false,
+      message: 'Token not provided.'
+    });
+  }
+
+});
+
+app.use('/api', router);
 
 module.exports = router;

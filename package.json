@@ -16,7 +16,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --debug server.js"
+    "start": "nodemon server.js",
+    "start": "--debug server.js"
   },
   "repository": {
     "type": "git",
