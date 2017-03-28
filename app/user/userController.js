@@ -1,12 +1,12 @@
-const express = require('express');
-const router = express.Router();
-const bodyParser = require('body-parser');
+import express from 'express';
+import bodyParser from 'body-parser';
+import User from './user';
 
-router.use(bodyParser.urlencoded({ extended: true }));
+const route = express.Router();
 
-const User = require('./user');
+route.use(bodyParser.urlencoded({ extended: true }));
 
-router.post('/', (req, res) => {
+route.post('/', (req, res) => {
     User.create({
         name: req.body.name,
         email: req.body.email,
@@ -21,7 +21,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.get('/', (req, res) => {
+route.get('/', (req, res) => {
     User.find({}, (err, users) => {
 
         if (err) {
@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/:id', (req, res) => {
+route.get('/:id', (req, res) => {
     User.findById(req.params.id, (err, user) => {
 
         if (err) {
@@ -46,7 +46,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-router.delete('/:id', (req, res) => {
+route.delete('/:id', (req, res) => {
     User.findByIdAndRemove(req.params.id, (err, user) => {
 
         if (err) {
@@ -57,7 +57,7 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-router.put('/:id', (req, res) => {
+route.put('/:id', (req, res) => {
     User.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, user) => {
 
         if (err) {
@@ -68,4 +68,4 @@ router.put('/:id', (req, res) => {
     });
 });
 
-module.exports = router;
+module.exports = route;

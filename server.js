@@ -1,9 +1,8 @@
-const app = require('./app');
-const config = require('./config/config');
-const mongoose = require('mongoose');
-// const fs = require('fs');
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
+import app from './app';
+import config from './config/config';
+import mongoose from 'mongoose';
+import morgan from 'morgan';
+import bodyParser from 'body-parser';
 
 // use morgan to log requests to the console
 app.use(morgan('dev'));
@@ -16,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
-    res.send(`Hello! The API is at http://localhost:${config.port}/api`);
+    res.send(`Hello World! Port: ${config.port}`);
 });
 
 // Create server

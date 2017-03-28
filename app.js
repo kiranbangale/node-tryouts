@@ -1,7 +1,8 @@
-const express = require('express');
+import express from 'express';
 const app = express();
-const UserController = require('./app/user/userController');
-const LoginController = require('./app/login/loginController');
+
+import UserController from './app/user/userController';
+import LoginController from './app/login/loginController';
 
 app.use('/login', LoginController);
 app.use('/users', UserController);
