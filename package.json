@@ -4,9 +4,12 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "bcrypt": "1.0.2",
     "body-parser": "1.17.1",
     "dotenv": "4.0.0",
     "express": "4.15.2",
+    "express-validation": "1.0.2",
+    "joi": "10.3.1",
     "jsonwebtoken": "7.3.0",
     "mongoose": "4.9.0",
     "morgan": "1.8.1"

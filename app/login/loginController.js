@@ -45,10 +45,10 @@ route.post('/', (req, res) => {
     });
 });
 
-route.get('/', auth, (req, res) => {
-  res.json({
-    token: req.decoded
-  });
-});
+// route.get('/', auth, (req, res) => {
+//   res.json({
+//     token: req.decoded
+//   });
+// });
 
 module.exports = route;

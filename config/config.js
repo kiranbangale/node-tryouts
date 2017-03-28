@@ -1,8 +1,10 @@
 import dotenv from 'dotenv';
 dotenv.load();
 
-module.exports = {
+export default {
+// module.exports = {
     'secret': 'secret',
     'database': 'mongodb://localhost/restTest', //mongodb://<user>:<pass>@mongo.onmodulus.net:27017/Mikha4ot
-    'port': process.env.PORT || 3000
+    'port': process.env.PORT || 3000,
+    'env': 'dev'
 };

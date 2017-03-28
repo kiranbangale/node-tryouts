@@ -6,6 +6,7 @@ Ref links:
     Debugging: https://www.youtube.com/watch?v=03qGA-GJXjI // keep node-inspector running in terminal(seperate) and do node --debug server.js
     NVM: https://github.com/creationix/nvm/blob/master/README.markdown // nvm use 7
     Auth: https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens
+    MEAN: http://blog.mpayetta.com/node.js/restful/express/2016/07/23/building-a-node-restful-api-the-web-server/
 
 
 Handy commands:
