@@ -3,9 +3,9 @@ import loginCtrl from './loginCtrl';
 
 const router = express.Router();
 
-router.route('/token')
-  .post(loginCtrl.authenticate,
-    loginCtrl.generateToken,
-    loginCtrl.respondJWT);
+router.route('/')
+    .post(loginCtrl.authenticate,
+        loginCtrl.generateToken,
+        loginCtrl.respondJWT);
 
 export default router;

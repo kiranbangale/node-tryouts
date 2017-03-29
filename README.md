@@ -3,7 +3,7 @@ Ref links:
     Node: https://nodejs.org/dist/latest-v7.x/docs/api/documentation.html
     REST: https://hackernoon.com/restful-api-design-with-node-js-26ccf66eab09#.z8tysoh96
     Babel: http://stackoverflow.com/questions/28782656/how-to-run-node-js-app-with-es6-features-enabled, https://www.youtube.com/watch?v=LtEP_-3a5CY
-    Debugging: https://www.youtube.com/watch?v=03qGA-GJXjI // keep node-inspector running in terminal(seperate) and do node --debug server.js
+    Debugging: https://www.youtube.com/watch?v=03qGA-GJXjI // keep node-inspector running in terminal(seperate) and do node --debug server.js, --inspect --debug-brk
     NVM: https://github.com/creationix/nvm/blob/master/README.markdown // nvm use 7
     Auth: https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens
     MEAN: http://blog.mpayetta.com/node.js/restful/express/2016/07/23/building-a-node-restful-api-the-web-server/
@@ -74,17 +74,17 @@ MEAN Notes:
 Day5:
 
 SSL:
-    Followed: 
+    Followed:
         https://docs.nodejitsu.com/articles/HTTP/servers/how-to-create-a-HTTPS-server/
         https://aghassi.github.io/ssl-using-express-4/
 
-    For generate a self-signed certificate: 
+    For generate a self-signed certificate:
         openssl genrsa -out key.pem
         openssl req -new -key key.pem -out csr.pem
         openssl x509 -req -days 9999 -in csr.pem -signkey key.pem -out cert.pem
         rm csr.pem
 
-    SSL generation: 
+    SSL generation:
         openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days XXX
 
     Note: XXX is number of days you want this certificate to be valid for.
@@ -97,7 +97,7 @@ CORS:
 Nodemon
 
 
-Token Auth: 
+Token Auth:
     https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication
 
 

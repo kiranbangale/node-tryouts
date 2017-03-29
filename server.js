@@ -12,15 +12,15 @@ app.use(morgan('dev'));
 mongoose.connect(config.database);
 
 mongoose.connection.on('err', () => {
-  throw new Error(`unable to connect to database: ${config.database}`);
+    throw new Error(`unable to connect to database: ${config.database}`);
 });
 
 mongoose.connection.on('connected', () => {
-  console.log(`Connected to database: ${config.database}`);
+    console.log(`Connected to database: ${config.database}`);
 });
 
 if (config.env === 'dev') {
-  mongoose.set('debug', true);
+    mongoose.set('debug', true);
 }
 
 

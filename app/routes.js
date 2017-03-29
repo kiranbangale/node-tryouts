@@ -8,9 +8,9 @@ router.use('/users', userRoutes);
 router.use('/login', loginRoutes);
 
 router.get('/api-status', (req, res) =>
-  res.json({
-    status: "ok"
-  })
+    res.json({
+        status: "ok"
+    })
 );
 
 export default router;

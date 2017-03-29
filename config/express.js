@@ -16,26 +16,26 @@ app.use('/api', routes);
 
 app.use((err, req, res, nxt) => {
 
-  res.status(err.status)
-    .json({
-      status: err.status,
-      message: err.message
-    });
+    res.status(err.status)
+        .json({
+            status: err.status,
+            message: err.message
+        });
 
 });
 
 
 app.use((err, req, res, nxt) => {
-  
-  if (err instanceof expressValidation.ValidationError) {
-    res.status(err.status).json(err);
-  } else {
-    res.status(500)
-      .json({
-        status: err.status,
-        message: err.message
-      });
-  }
+
+    if (err instanceof expressValidation.ValidationError) {
+        res.status(err.status).json(err);
+    } else {
+        res.status(500)
+            .json({
+                status: err.status,
+                message: err.message
+            });
+    }
 
 });
 
