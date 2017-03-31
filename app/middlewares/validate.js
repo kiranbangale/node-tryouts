@@ -5,8 +5,7 @@ export default {
     // POST
     createReq: {
         body: {
-            firstname: Joi.string().required(),
-            lastname: Joi.string().required(),
+            username: Joi.string().required(),
             email: Joi.string().regex(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).required(),
             password: Joi.string().required(),
             userType: Joi.string().required(),
@@ -22,8 +21,7 @@ export default {
 
     // PUT
     updateReq: {
-        firstname: Joi.string().required(),
-        lastname: Joi.string().required(),
+        username: Joi.string().required(),
         email: Joi.string().regex(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).required(),
         password: Joi.string().required(),
         userType: Joi.string().required(),

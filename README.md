@@ -6,7 +6,7 @@ Ref links:
     Debugging: https://www.youtube.com/watch?v=03qGA-GJXjI // keep node-inspector running in terminal(seperate) and do node --debug server.js, --inspect --debug-brk
     NVM: https://github.com/creationix/nvm/blob/master/README.markdown // nvm use 7
     Auth: https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens
-    MEAN: http://blog.mpayetta.com/node.js/restful/express/2016/07/23/building-a-node-restful-api-the-web-server/
+    MEAN: http://blog.mpayetta.com/node.js/restful/express/joi/2016/07/28/building-a-node-restful-api-request-validation/
 
 
 Handy commands:
@@ -107,3 +107,7 @@ Express:
 
 
 https://codeforgeek.com/2016/08/token-based-authentication-using-nodejs-rethinkdb/
+
+
+Header: {"Content-Type":"application/x-www-form-urlencoded"}
+Body: application/x-www-form-urlencoded:  {"firstname":"kiran","email":"ki@gmail.com","password":"ki","lastname":"bangale","userType":"admin","username":"kiran"}
