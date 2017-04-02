@@ -13,18 +13,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // mount all routes on /api path
 app.use('/api', routes);
 
-
-app.use((err, req, res, nxt) => {
-
-    res.status(err.status)
-        .json({
-            status: err.status,
-            message: err.message
-        });
-
-});
-
-
 app.use((err, req, res, nxt) => {
 
     if (err instanceof expressValidation.ValidationError) {

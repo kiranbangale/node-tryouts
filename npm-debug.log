@@ -1,42 +1,44 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'start' ]
-2 info using npm@3.10.10
-3 info using node@v6.9.5
+1 verbose cli [ '/home/kiran/.nvm/versions/node/v7.7.2/bin/node',
+1 verbose cli   '/home/kiran/.nvm/versions/node/v7.7.2/bin/npm',
+1 verbose cli   'start' ]
+2 info using npm@4.1.2
+3 info using node@v7.7.2
 4 verbose run-script [ 'prestart', 'start', 'poststart' ]
 5 info lifecycle Tryouts@1.0.0~prestart: Tryouts@1.0.0
 6 silly lifecycle Tryouts@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle Tryouts@1.0.0~start: Tryouts@1.0.0
 8 verbose lifecycle Tryouts@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle Tryouts@1.0.0~start: PATH: /usr/lib/node_modules/npm/bin/node-gyp-bin:/var/www/html/kiranbangale/Tryouts/node_modules/.bin:/home/kiran/.local/share/umake/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-10 verbose lifecycle Tryouts@1.0.0~start: CWD: /var/www/html/kiranbangale/Tryouts
-11 silly lifecycle Tryouts@1.0.0~start: Args: [ '-c', 'node bin/dev' ]
+9 verbose lifecycle Tryouts@1.0.0~start: PATH: /home/kiran/.nvm/versions/node/v7.7.2/lib/node_modules/npm/bin/node-gyp-bin:/home/kiran/Desktop/Work/Study/Training/Node-Training/cueTraining/Tryouts/Tryouts/node_modules/.bin:/home/kiran/.nvm/versions/node/v7.7.2/bin:/home/kiran/bin:/home/kiran/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+10 verbose lifecycle Tryouts@1.0.0~start: CWD: /home/kiran/Desktop/Work/Study/Training/Node-Training/cueTraining/Tryouts/Tryouts
+11 silly lifecycle Tryouts@1.0.0~start: Args: [ '-c', 'node --inspect bin/dev' ]
 12 silly lifecycle Tryouts@1.0.0~start: Returned: code: 1  signal: null
 13 info lifecycle Tryouts@1.0.0~start: Failed to exec start script
-14 verbose stack Error: Tryouts@1.0.0 start: `node bin/dev`
+14 verbose stack Error: Tryouts@1.0.0 start: `node --inspect bin/dev`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/usr/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+14 verbose stack     at EventEmitter.<anonymous> (/home/kiran/.nvm/versions/node/v7.7.2/lib/node_modules/npm/lib/utils/lifecycle.js:279:16)
 14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at EventEmitter.emit (events.js:191:7)
-14 verbose stack     at ChildProcess.<anonymous> (/usr/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at EventEmitter.emit (events.js:194:7)
+14 verbose stack     at ChildProcess.<anonymous> (/home/kiran/.nvm/versions/node/v7.7.2/lib/node_modules/npm/lib/utils/spawn.js:40:14)
 14 verbose stack     at emitTwo (events.js:106:13)
-14 verbose stack     at ChildProcess.emit (events.js:191:7)
-14 verbose stack     at maybeClose (internal/child_process.js:877:16)
+14 verbose stack     at ChildProcess.emit (events.js:194:7)
+14 verbose stack     at maybeClose (internal/child_process.js:899:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid Tryouts@1.0.0
-16 verbose cwd /var/www/html/kiranbangale/Tryouts
-17 error Linux 3.13.0-85-generic
-18 error argv "/usr/bin/nodejs" "/usr/bin/npm" "start"
-19 error node v6.9.5
-20 error npm  v3.10.10
+16 verbose cwd /home/kiran/Desktop/Work/Study/Training/Node-Training/cueTraining/Tryouts/Tryouts
+17 error Linux 4.4.0-66-generic
+18 error argv "/home/kiran/.nvm/versions/node/v7.7.2/bin/node" "/home/kiran/.nvm/versions/node/v7.7.2/bin/npm" "start"
+19 error node v7.7.2
+20 error npm  v4.1.2
 21 error code ELIFECYCLE
-22 error Tryouts@1.0.0 start: `node bin/dev`
+22 error Tryouts@1.0.0 start: `node --inspect bin/dev`
 22 error Exit status 1
-23 error Failed at the Tryouts@1.0.0 start script 'node bin/dev'.
+23 error Failed at the Tryouts@1.0.0 start script 'node --inspect bin/dev'.
 23 error Make sure you have the latest version of node.js and npm installed.
 23 error If you do, this is most likely a problem with the Tryouts package,
 23 error not with npm itself.
 23 error Tell the author that this fails on your system:
-23 error     node bin/dev
+23 error     node --inspect bin/dev
 23 error You can get information on how to open an issue for this project with:
 23 error     npm bugs Tryouts
 23 error Or if that isn't available, you can get their info via:

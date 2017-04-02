@@ -40,7 +40,7 @@ function generateToken(req, res, nxt) {
 
 }
 
-function respondJWT(req, res) {
+function respondJWT(req, res, nxt) {
 
     if (!req.user) {
         res.status(401).json({
@@ -50,6 +50,7 @@ function respondJWT(req, res) {
         res.status(200).json({
             jwt: req.token
         });
+        nxt();
     }
 
 }
