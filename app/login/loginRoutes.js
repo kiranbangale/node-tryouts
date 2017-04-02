@@ -10,4 +10,8 @@ router.route('/')
         loginCtrl.respondJWT,
         activity.save);
 
+router.get('/', (req, res) => {
+    res.render('../views/index');
+});
+
 export default router;
